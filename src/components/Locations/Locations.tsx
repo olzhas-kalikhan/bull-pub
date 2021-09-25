@@ -1,5 +1,6 @@
 import { Typography } from "@mui/material";
 import Screen from "components/Screen";
+import DesktopLocations from "./DesktopLocations";
 
 import MobileLocations from "./MobileLocations";
 
@@ -10,6 +11,7 @@ const Locations = () => {
         Locations
       </Typography>
       <MobileLocations />
+      <DesktopLocations />
     </Screen>
   );
 };

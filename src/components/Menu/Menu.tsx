@@ -1,6 +1,5 @@
-import React, { useState } from "react";
 import Screen from "components/Screen";
-import { SelectChangeEvent, Typography } from "@mui/material";
+import {  Typography } from "@mui/material";
 
 import MobileMenu from "./MobileMenu";
 import DesktopMenu from "./DesktopMenu";

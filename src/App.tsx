@@ -1,5 +1,5 @@
 import Landing from "components/Landing";
-import { Container, Divider } from "@mui/material";
+import { Container } from "@mui/material";
 import Menu from "components/Menu";
 import { Element } from "react-scroll";
 import Locations from "components/Locations";

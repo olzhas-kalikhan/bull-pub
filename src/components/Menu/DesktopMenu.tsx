@@ -1,5 +1,4 @@
 import { Divider, Grid, Typography } from "@mui/material";
-import { Box } from "@mui/system";
 import MenuItem from "components/MenuItem";
 import Responsive from "components/Responsive";
 import { MENU_CATEGORIES } from "./menuCategories";

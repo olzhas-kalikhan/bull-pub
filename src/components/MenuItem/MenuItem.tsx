@@ -1,5 +1,5 @@
 import { FC } from "react";
-import { Box, Fade, ListItem, Typography } from "@mui/material";
+import { Box, Fade, Typography } from "@mui/material";
 import { FoodItem } from "components/Menu/menuCategories";
 
 type MenuItemProps = {

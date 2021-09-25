@@ -6,26 +6,10 @@ import {
   Typography,
 } from "@mui/material";
 import Responsive from "components/Responsive";
-import { Map, Marker, Point } from "pigeon-maps";
+import { Map, Marker } from "pigeon-maps";
 import { useState, ChangeEvent } from "react";
+import { COORDINATES } from "./coordinates";
 
-type Coordinates = {
-  location: string;
-  coords: Point;
-  address: string;
-};
-const COORDINATES: Coordinates[] = [
-  {
-    location: "Mississauga",
-    coords: [43.6624908, -79.5929195],
-    address: "2800 Skymark Ave, Mississauga, ON L4W 5A6, Canada",
-  },
-  {
-    location: "Etobicoke",
-    coords: [43.6452552, -79.5202029],
-    address: "3313 Bloor St W, Etobicoke, ON M8X 1E7, Canada",
-  },
-];
 const MobileLocations = () => {
   const [selectedLocationIdx, setSelectedLocationIdx] = useState(0);
   const handleRadioChange = (event: ChangeEvent<HTMLInputElement>) => {
