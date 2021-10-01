@@ -8,7 +8,7 @@ import {
 import Responsive from "components/Responsive";
 import { Map, Marker } from "pigeon-maps";
 import { useState, ChangeEvent } from "react";
-import { COORDINATES } from "./coordinates";
+import { LOCATIONS } from "./locations.constants";
 
 const MobileLocations = () => {
   const [selectedLocationIdx, setSelectedLocationIdx] = useState(0);
@@ -19,16 +19,12 @@ const MobileLocations = () => {
     <Responsive min="xs" max="md">
       <Map
         height={300}
-        defaultCenter={COORDINATES[0].coords}
-        center={COORDINATES[selectedLocationIdx].coords}
+        defaultCenter={LOCATIONS[0].coords}
+        center={LOCATIONS[selectedLocationIdx].coords}
         defaultZoom={16}
       >
-        {COORDINATES.map(({ location, coords }, i) => (
-          <Marker
-            key={`${location}-${i}-coordinates`}
-            width={50}
-            anchor={coords}
-          />
+        {LOCATIONS.map(({ city, coords }, i) => (
+          <Marker key={`${city}-${i}-coordinates`} width={50} anchor={coords} />
         ))}
       </Map>
       <RadioGroup
@@ -40,18 +36,18 @@ const MobileLocations = () => {
         <Box
           sx={{ display: "flex", justifyContent: "space-around", mt: 2, mb: 2 }}
         >
-          {COORDINATES.map((coord, i) => (
+          {LOCATIONS.map(({ city }, i) => (
             <FormControlLabel
-              key={`${coord.location}-${i}`}
+              key={`${city}-${i}`}
               value={i}
               control={<Radio />}
-              label={coord.location}
+              label={city}
             />
           ))}
         </Box>
       </RadioGroup>
       <Typography variant="h6">
-        {COORDINATES[selectedLocationIdx].address}
+        {LOCATIONS[selectedLocationIdx].address}
       </Typography>
     </Responsive>
   );

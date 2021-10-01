@@ -1,6 +1,6 @@
 import { FC } from "react";
-import { Box, Fade, Typography } from "@mui/material";
-import { FoodItem } from "components/Menu/menuCategories";
+import { Box, Divider, Fade, Typography } from "@mui/material";
+import { FoodItem } from "constants/menu.constants";
 
 type MenuItemProps = {
   item: FoodItem;
@@ -24,6 +24,7 @@ const MenuItem: FC<MenuItemProps> = ({ item }) => {
             {description}
           </Typography>
         )}
+        <Divider />
       </Box>
     </Fade>
   );

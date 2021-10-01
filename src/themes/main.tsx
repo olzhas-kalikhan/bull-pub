@@ -1,28 +1,38 @@
 import { createTheme } from "@mui/material/styles";
+
+declare module "@mui/material/styles" {
+  interface Palette {
+    transparent: string;
+  }
+  interface PaletteOptions {
+    transparent?: string;
+  }
+}
 let theme = createTheme({
   palette: {
     mode: "dark",
     primary: {
-      main: "#F2F2F2",
+      main: "#F3F2E3",
     },
     secondary: {
       main: "#FE2626",
     },
     background: {
-      paper: "#051426",
-      default: "#051426",
+      paper: "#051937",
+      default: "#051937",
     },
+    transparent: "rgba(5, 20, 38,0.85)",
     divider: "rgba(255,255,255,0.30)",
   },
   typography: {
-    fontFamily: "'Lato','Coda'",
+    fontFamily: "'Lato','Maven Pro'",
     fontWeightMedium: 600,
   },
 });
-theme.breakpoints.values.xl = 9000;
+
 theme.typography.h1 = {
-  fontFamily: "Coda",
-  fontWeight: "bold",
+  fontFamily: "Maven Pro",
+  fontWeight: 900,
   fontSize: "3.6rem",
   [theme.breakpoints.up("md")]: {
     fontSize: "4rem",
@@ -35,7 +45,7 @@ theme.typography.h2 = {
   },
 };
 theme.typography.h3 = {
-  fontFamily: "Coda",
+  fontFamily: "Lato",
   fontWeight: 500,
   fontSize: "2rem",
   [theme.breakpoints.up("md")]: {
@@ -43,10 +53,28 @@ theme.typography.h3 = {
   },
 };
 theme.typography.h4 = {
+  fontFamily: "Maven Pro",
   fontWeight: 500,
   fontSize: "1.8rem",
   [theme.breakpoints.up("md")]: {
     fontSize: "2rem",
+  },
+};
+theme.typography.h5 = {
+  fontFamily: "Maven Pro",
+  fontWeight: 800,
+  fontSize: "1rem",
+  textAlign: "center",
+  [theme.breakpoints.up("md")]: {
+    fontSize: "1.4rem",
+  },
+};
+theme.typography.h6 = {
+  fontWeight: 500,
+  fontSize: "0.8rem",
+  textAlign: "center",
+  [theme.breakpoints.up("md")]: {
+    fontSize: "1rem",
   },
 };
 theme.typography.subtitle1 = {
@@ -64,6 +92,12 @@ theme.typography.caption = {
     fontSize: "1rem",
   },
 };
+theme.breakpoints.values.xl = 9000;
 export { theme };
 // darkBlue: "#011C26",
 // red: "#FE2626",
+//#04080D
+//#0E1826
+//#F3F2E3
+//#B59F89
+//#591111

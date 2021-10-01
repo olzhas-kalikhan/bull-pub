@@ -8,7 +8,7 @@ import {
 import Responsive from "components/Responsive";
 import MenuItem from "components/MenuItem";
 import { useState } from "react";
-import { MENU_CATEGORIES } from "./menuCategories";
+import { MENU_CATEGORIES } from "constants/menu.constants";
 
 const MobileMenu = () => {
   const [categoryIdx, setCategoryIdx] = useState<number>(0);

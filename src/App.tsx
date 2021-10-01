@@ -1,24 +1,24 @@
-import Landing from "components/Landing";
 import { Container } from "@mui/material";
-import Menu from "components/Menu";
 import { Element } from "react-scroll";
-import Locations from "components/Locations";
+import NavBar from "components/NavBar";
+import "./App.css";
+import { NAVS } from "constants/navs.constants";
+import BackgroundCarousel from "components/BackgroundTransition";
+
 function App() {
   return (
-    <Container sx={{ padding: 0 }}>
-      <Element name="Landing">
-        <Landing />
-      </Element>
-
-      <Element name="Menu">
-        <Menu />
-      </Element>
-
-      <Element name="Locations">
-        <Locations />
-      </Element>
+    <Container disableGutters maxWidth={false}>
+      <BackgroundCarousel />
+      <NavBar />
+      {NAVS.map(({ Component, containerId }, i) => (
+        <Element key={containerId} name={containerId}>
+          <Component />
+        </Element>
+      ))}
     </Container>
   );
 }
 
 export default App;
+//041015
+//#051937

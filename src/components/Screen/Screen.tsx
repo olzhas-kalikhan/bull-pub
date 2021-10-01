@@ -1,14 +1,28 @@
-import { Container } from "@mui/material";
+import { FC } from "react";
+import { Container, ContainerProps } from "@mui/material";
 import { ContainerSX } from "./styles";
-type ScreenProps = {
+type ScreenProps = ContainerProps & {
   children?: JSX.Element | JSX.Element[];
-  backgroundImage?: String;
-  centered?: Boolean;
+  backgroundColor?: string;
+  backgroundImage?: string;
 };
-const Screen = ({ children, backgroundImage, centered }: ScreenProps) => {
+const Screen: FC<ScreenProps> = ({
+  children,
+  backgroundColor,
+  backgroundImage,
+  ...rest
+}) => {
   return (
-    <Container sx={ContainerSX(backgroundImage, centered)}>
-      {children}
+    <Container
+      sx={{
+        ...ContainerSX,
+        backgroundColor: backgroundColor || "rgba(5, 25, 55,0.9)",
+        backgroundImage,
+      }}
+      maxWidth={false}
+      {...rest}
+    >
+      <Container sx={{ m: "auto" }}>{children}</Container>
     </Container>
   );
 };

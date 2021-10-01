@@ -88,6 +88,18 @@ export const MENU_CATEGORIES: Category[] = [
           "Boneless crispy chicken bites tossed in your choice of wing sauce; served with carrots and ranch dressing",
         price: 11,
       },
+      {
+        title: "Chicken Shawarma Flatbread",
+        description:
+          "Tomato Sauce, bell peppers and red onions; finished with melted marble cheese",
+        price: 12,
+      },
+      {
+        title: "Bruscheta Flatbread",
+        description:
+          "Tzatziki sauce, tomatoes, onions, herbs, feta cheese and marble cheese with a balsamic reduction",
+        price: 12,
+      },
     ],
   },
   {
@@ -132,20 +144,124 @@ export const MENU_CATEGORIES: Category[] = [
     ],
   },
   {
-    id: "Nachos & Quesadilla",
+    id: "Nachos & Wings",
     items: [
       {
         title: "Baked Nachos",
         description:
           "Tortilla chips covered with tomatoes, jalapeños, sweet peppers, green onions and shredded marble cheese served with sour cream and salsa. 15 Add grilled chicken 4 | Add chili 4 | Add guacamole 2.50",
+        price: 15,
+      },
+      {
+        title: "Wings",
+        description:
+          "Served with carrot sticks with your choice of ranch or blue cheese on the side for dipping. Lightly dusted with seasoned flour and tossed in you choice of wing sauce",
+        price: 13.5,
       },
       {
         title: "Quesadilla",
         description:
-          "Soft flour tortillas baked with a filling of cheese, tomato, jalapeños, sweet peppers and green onion served with sour cream and salsa 10",
+          "Soft flour tortillas baked with a filling of cheese, tomato, jalapeños, sweet peppers and green onion served with sour cream and salsa",
+        price: 10,
       },
       {
         title: "Chipotle Chicken Quesadilla",
+        price: 12,
+      },
+    ],
+  },
+  {
+    id: "Burgers & Sandwiches",
+    items: [
+      {
+        title: "Classic Burger",
+        description:
+          "A tender and juicy 6oz burger grilled to perfection. Topped with lettuce, tomatoes, onions, mayo and pickle",
+        price: 13,
+      },
+      {
+        title: "Banquet Burger",
+        description:
+          "Beef burger with peameal bacon and melted marble cheese. Topped with lettuce, tomatoes, onions, mayo and pickle",
+        price: 16,
+      },
+      {
+        title: "Vegeterian Burger",
+        description:
+          "Grilled veggie patty with fresh tzatziki, tomatoes, onions and feta cheese",
+        price: 13,
+      },
+      {
+        title: "The Lamb Burger",
+        description:
+          "Seasoned with mint and basil topped with tzatziki, spring mix, onions, tomatoes, herbs and feta cheese",
+        price: 15,
+      },
+      {
+        title: "West Coast Burger",
+        description:
+          "Beef burger topped with fresh avocado, fire-roasted red pepper and roasted garlic aioli. Topped with lettuce, tomatoes, onions, mayo and pickle",
+        price: 16,
+      },
+      {
+        title: "Portabelo Mushroom Burger",
+        description:
+          "Balsamic roasted portabello caps topped with spring mix, local goat cheese and red peppers",
+        price: 13,
+      },
+      {
+        title: "Fish Tacos",
+        description:
+          "Two soft tacos filled with beer battered fish, lettuce, cabbage slaw, pico de gallo and aspicy tartar sauce",
+        price: 14,
+      },
+      {
+        title: "Steak Sandwich",
+        description:
+          "A grilled 60z striploin topped with sautéed creminl mushrooms, caramelized onions ona toasted garlic panini",
+        price: 19,
+      },
+      {
+        title: "Roast Beef dip",
+        description:
+          "Thinly sliced tender roast beef and caramelized onions, creamed horseradish and a rich beef au jus on a toasted garlic panini",
+        price: 14,
+      },
+      {
+        title: "Canadian Club",
+        description:
+          "Grilled chicken topped with peameal bacon, lettuce, tomatoes and mayo, served on toasted 10 grain or white bread",
+        price: 14,
+      },
+      {
+        title: "PBLT",
+        description:
+          "Peameal bacon, lettuce, tomato and mayo on toasted whole 10 grain or white bread",
+        price: 12,
+      },
+      {
+        title: "Caribean Jerk Chicken",
+        description:
+          "Grilled chicken, mayo, lettuce, tomatoes and red onion, seared in a spicy Caribbean jerk sauce on a rustic bun with melted monterey jack",
+        price: 15,
+      },
+      {
+        title: "Chipotle Chicken Wrap",
+        description:
+          "Crispy breaded chicken tossed in chipotle sauce with lettuce, tomatoes and marble cheese wrapped ina grilled soft tortilla",
+        price: 14,
+      },
+      {
+        title: "Chipotle Fajita Wrap",
+        description:
+          "Grilled chicken wrapped with onions, sweet peppers, tomatoes, lettuce, Tex Mex cheese, salsa and oursecret spices",
+        price: 14,
+      },
+      {
+        title: "Grilled Veggie Wrap",
+        description:
+          "House marinated grilled vegetable, spring mix, tomatoes and feta cheese wrapped in a grilled soft tortilla",
+        price: 14,
       },
     ],
   },

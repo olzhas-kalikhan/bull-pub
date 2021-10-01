@@ -2,20 +2,25 @@ import { Grid, Typography, ButtonBase } from "@mui/material";
 import { Box } from "@mui/system";
 import Responsive from "components/Responsive";
 import { Map, Marker } from "pigeon-maps";
-
-import { COORDINATES } from "./coordinates";
+import { osm } from "pigeon-maps/providers";
+import { LOCATIONS } from "./locations.constants";
 import ContentCopyIcon from "@mui/icons-material/ContentCopy";
 const DesktopLocations = () => {
   return (
     <Responsive min="md" max="xl">
       <Grid container>
-        {COORDINATES.map(({ location, coords, address }, i) => (
-          <Grid xs={12} md={6}>
+        {LOCATIONS.map(({ city, coords, address }, i) => (
+          <Grid item xs={12} md={6} key={`locations-${city}`}>
             <Box sx={{ padding: 2 }}>
               <Typography variant="h5" textAlign="center">
-                {location}
+                {city}
               </Typography>
-              <Map height={300} defaultCenter={coords} defaultZoom={16}>
+              <Map
+                provider={osm}
+                height={300}
+                defaultCenter={coords}
+                defaultZoom={14}
+              >
                 <Marker width={50} anchor={coords} />
               </Map>
               <ButtonBase
