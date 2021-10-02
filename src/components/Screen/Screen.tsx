@@ -22,7 +22,16 @@ const Screen: FC<ScreenProps> = ({
       maxWidth={false}
       {...rest}
     >
-      <Container sx={{ m: "auto" }}>{children}</Container>
+      <Container
+        sx={{
+          m: "auto",
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+        }}
+      >
+        {children}
+      </Container>
     </Container>
   );
 };

@@ -14,6 +14,7 @@ const NavBar: FC = () => {
   };
   const handleTabChange = (event: React.SyntheticEvent, value: any) => {
     scroller.scrollTo(value, {
+      duration: 700,
       smooth: true,
       offset: 1,
     });
@@ -71,7 +72,17 @@ const NavBar: FC = () => {
           </Tabs>
         </Box>
         <Box sx={{ my: "auto" }}>
-          <Button color="primary" variant="contained">
+          <Button
+            color="primary"
+            variant="contained"
+            onClick={() => {
+              scroller.scrollTo("Screen-Contacts", {
+                duration: 700,
+                smooth: true,
+                offset: 1,
+              });
+            }}
+          >
             Call Us Now
           </Button>
         </Box>

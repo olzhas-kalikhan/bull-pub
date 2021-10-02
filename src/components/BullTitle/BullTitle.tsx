@@ -15,7 +15,7 @@ const BullTitle = () => {
             The <span style={{ color: "#FE2626" }}> BULL</span>
           </Typography>
 
-          <Typography variant="h3">Pub & Grill</Typography>
+          <Typography variant="h2">Pub & Grill</Typography>
         </Box>
       </Fade>
     </Box>

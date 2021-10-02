@@ -25,7 +25,7 @@ let theme = createTheme({
     divider: "rgba(255,255,255,0.30)",
   },
   typography: {
-    fontFamily: "'Lato','Maven Pro'",
+    fontFamily: ["Maven Pro", "Martel Sans", "Roboto"].join(","),
     fontWeightMedium: 600,
   },
 });
@@ -39,21 +39,24 @@ theme.typography.h1 = {
   },
 };
 theme.typography.h2 = {
+  fontFamily: "Martel Sans",
   fontSize: "2.2rem",
+  textShadow: "0em 0.1em 0.5em #000",
   [theme.breakpoints.up("md")]: {
     fontSize: "2.5rem",
   },
 };
 theme.typography.h3 = {
-  fontFamily: "Lato",
+  fontFamily: "Martel Sans",
   fontWeight: 500,
   fontSize: "2rem",
+
   [theme.breakpoints.up("md")]: {
     fontSize: "3rem",
   },
 };
 theme.typography.h4 = {
-  fontFamily: "Maven Pro",
+  fontFamily: "Martel Sans",
   fontWeight: 500,
   fontSize: "1.8rem",
   [theme.breakpoints.up("md")]: {
@@ -70,12 +73,17 @@ theme.typography.h5 = {
   },
 };
 theme.typography.h6 = {
+  fontFamily: "Martel Sans",
   fontWeight: 500,
   fontSize: "0.8rem",
   textAlign: "center",
   [theme.breakpoints.up("md")]: {
     fontSize: "1rem",
   },
+};
+theme.typography.body2 = {
+  fontFamily: "Roboto",
+  fontSize: "1.5rem",
 };
 theme.typography.subtitle1 = {
   fontSize: "1rem",

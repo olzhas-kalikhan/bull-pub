@@ -265,4 +265,75 @@ export const MENU_CATEGORIES: Category[] = [
       },
     ],
   },
+  {
+    id: "Bull Favorites",
+    items: [
+      {
+        title: "Fish & Chips",
+        description:
+          "Deep fried haddock ina crispy ale beer batter, served with pub chips, cabbage slaw and tartar sauce.",
+        price: 14,
+      },
+      {
+        title: "8oz NY Striploin",
+        description:
+          "“AAA” center cut steak grilled to your taste. Topped with a red wine mushroom onion sauce and served with garlic mashed potatoes and seasoned vegetables",
+        price: 23,
+      },
+      {
+        title: "Bangers, Beans & Mash",
+        description:
+          "Real English bangers, caramelized onions and baked beans with garlic mashed potatoes",
+        price: 13.5,
+      },
+      {
+        title: "HOT'N Spicy Stir-Fry",
+        description:
+          "Fresh mixed vegetables, peanuts, garlic, and coriander with Teriyaki sauce served on basmati rice and sprinkled with toasted sesame seeds",
+        price: 13.5,
+      },
+      {
+        title: "Classic Chicken Fingers",
+        description:
+          "Lightly breaded chicken tenders; served with pub chips and plum sauce",
+        price: 13.5,
+      },
+      {
+        title: "Chicken Souvlaki",
+        description:
+          "Lemon and oregano marinated grilled chicken skewers, with basmati rice, Greek salad and tzatziki sauce",
+        price: 18,
+      },
+      {
+        title: "Sheppard's Pie",
+        description:
+          "Ground beef, peas, carrots and onion and with beef gravy topped with parmesan garlic mashed potatoes and served with mixed greens",
+        price: 16,
+      },
+      {
+        title: "Steak & Portabello Mushroom Pie",
+        description:
+          "Braised beef tenderloin tipsina portobello mushroom demi-glaze, baked with puff pastry and topped with beef gravy, served with garlic mashed potatoes and seasonal vegetables",
+        price: 16,
+      },
+      {
+        title: "Norwegian Steelhead Salmon & Jumbo Shrimp",
+        description:
+          "Baked salmon topped with Red Thai sauce and grilled jurnbo shrimp. Served with basmati rice pilaf and stearned seasonal vegetables",
+        price: 23,
+      },
+      {
+        title: "Chicken Valencia",
+        description:
+          "Pan seared free range chicken breast topped with tiger shrimp, black olives in a mushroom white wine cream sauce. Served with garlic mashed potatoes and steamed seasonal vegetables",
+        price: 18,
+      },
+      {
+        title: "Sizzling Fajitas",
+        description:
+          "Warr flour tortillas, sour cream, salsa, marble cheese, chopped tomatoes, lettuce; followed by caramelized onions and peppers, served on a sizzling skillet with your choice of Chicken or Steak",
+        price: 20,
+      },
+    ],
+  },
 ];
