@@ -1,43 +1,42 @@
-import { Grid, Typography } from "@mui/material";
-import MenuItem from "components/MenuItem";
-import Responsive from "components/Responsive";
-import { Category, MENU_CATEGORIES } from "constants/menu.constants";
-import Accordion from "@mui/material/Accordion";
-import AccordionDetails from "@mui/material/AccordionDetails";
-import AccordionSummary from "@mui/material/AccordionSummary";
+import { useState, FC } from "react";
+import { Box, Tab, Tabs } from "@mui/material";
 
-const organizedCategories = () => {
-  const out: Category[][] = [[], []];
-  MENU_CATEGORIES.forEach((category, i) => {
-    if (i % 2 === 0) {
-      out[0].push(category);
-    } else {
-      out[1].push(category);
-    }
-  });
-  return out;
+import Responsive from "components/Responsive";
+import { Category } from "constants/menu.constants";
+
+import CategoryPanel from "components/CategoryPanel";
+
+type MenuProps = {
+  categories: Category[];
 };
-const DesktopMenu = () => {
+const DesktopMenu: FC<MenuProps> = ({ categories }) => {
+  const [selectedCategory, setSelectedCategory] = useState(0);
+  const handleTabChange = (event: React.SyntheticEvent, newValue: number) => {
+    setSelectedCategory(newValue);
+  };
   return (
     <Responsive min="md" max="xl">
-      <Grid container sx={{ mt: 5 }}>
-        {organizedCategories().map((categories) => (
-          <Grid item lg={6} md={6}>
-            {categories.map((category) => (
-              <Accordion defaultExpanded key={category.id} square>
-                <AccordionSummary>
-                  <Typography variant="h4"> {category.id}</Typography>
-                </AccordionSummary>
-                <AccordionDetails>
-                  {category.items?.map((item, i) => (
-                    <MenuItem key={`${category}-${i}`} item={item} />
-                  ))}
-                </AccordionDetails>
-              </Accordion>
-            ))}
-          </Grid>
+      <Box data-aos="fade">
+        <Tabs
+          centered
+          value={selectedCategory}
+          onChange={handleTabChange}
+          variant="fullWidth"
+          sx={{ my: 4 }}
+        >
+          {categories.map(({ id }) => (
+            <Tab key={`tab-${id}`} label={id} />
+          ))}
+        </Tabs>
+        {categories.map((category, i) => (
+          <CategoryPanel
+            key={`${category.id}-${i}`}
+            category={category}
+            currentIdx={selectedCategory}
+            idx={i}
+          />
         ))}
-      </Grid>
+      </Box>
     </Responsive>
   );
 };

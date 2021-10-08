@@ -1,1 +1,83 @@
+.box-stroke {
+  stroke-dasharray: 2200;
+  stroke-dashoffset: 1900;
 
+  animation: strokeAnimation 5s linear forwards;
+}
+.border-svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.title-border:nth-child(1) {
+  stroke: #aaa;
+  d: path("M 0,0 h 0");
+  fill: none;
+  stroke-width: 5px;
+  animation: leftFill linear 3s forwards;
+}
+
+.title-border:nth-child(2) {
+  stroke: #aaa;
+  d: path("M 100,0 v 0");
+  fill: none;
+  stroke-width: 5px;
+  animation: topFill linear 1s forwards 3s;
+}
+.title-border:nth-child(3) {
+  stroke: #aaa;
+  d: path("M 100,100 h 0");
+  fill: none;
+  stroke-width: 5px;
+  animation: rightFill linear 3s forwards;
+}
+.title-border:nth-child(4) {
+  stroke: #aaa;
+  d: path("M 0,100 v 0");
+  fill: none;
+  stroke-width: 5px;
+  animation: bottomFill linear 1s forwards 3s;
+}
+body {
+  overflow-x: hidden;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+@keyframes leftFill {
+  to {
+    d: path("M 0,0 h 100");
+  }
+}
+@keyframes topFill {
+  to {
+    d: path("M 100,0 v 100");
+  }
+}
+@keyframes bottomFill {
+  to {
+    d: path("M 0,100 v -100");
+  }
+}
+@keyframes rightFill {
+  to {
+    d: path("M 100,100 h -100");
+  }
+}
+@keyframes strokeAnimation {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes draw {
+  0% {
+    stroke-dashoffset: 2200;
+  }
+  50% {
+    stroke-dashoffset: 0;
+  }
+  100% {
+    stroke-dashoffset: -2200;
+  }
+}

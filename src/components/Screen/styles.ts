@@ -5,5 +5,4 @@ export const ContainerSX: SxProps = {
   minHeight: "100vh",
   display: "flex",
   flexDirection: "column",
-  pt: 6,
 };

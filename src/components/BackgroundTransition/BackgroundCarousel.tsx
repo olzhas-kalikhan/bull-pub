@@ -6,20 +6,18 @@ import bgBeer from "assets/img/bg-beer.jpg";
 import bgBeer2 from "assets/img/bg-beer2.jpg";
 import bgBeer3 from "assets/img/bg-beer3.jpg";
 import { keyframes } from "@mui/styled-engine";
+
 const fadeIn = keyframes`
     0%{
-        opacity: 0
+        opacity: 0;
     }
     100%{
-        opacity: 1
+        opacity: 1;
     }
 `;
 const fadeOut = keyframes`
-    0%{
-        opacity: 1
-    }
-    100%{
-        opacity: 0
+    to{
+        opacity: 0;
     }
 `;
 const BACKGROUNDS = [bgVibe, bgVibe2, bgBeer, bgBeer2, bgBeer3];
@@ -32,7 +30,7 @@ const BackgroundCarousel: FC = () => {
         if (prevIdx + 1 < BACKGROUNDS.length) return prevIdx + 1;
         else return 0;
       });
-    }, 1000 * 5);
+    }, 1000 * 10);
     return () => {
       clearInterval(timeInterval);
     };
@@ -40,8 +38,8 @@ const BackgroundCarousel: FC = () => {
   return (
     <Box
       sx={{
-        position: "fixed",
         width: "100%",
+        maxWidth: "100%",
         height: "100%",
         top: 0,
         left: 0,
@@ -50,22 +48,24 @@ const BackgroundCarousel: FC = () => {
     >
       {BACKGROUNDS.map((bg, i) => (
         <Box
+          key={`bg-carousel-${i}`}
           sx={{
             position: "absolute",
             top: 0,
             left: 0,
             width: "100%",
+            maxWidth: "100%",
             height: "100%",
             backgroundImage: `url(${bg})`,
             backgroundSize: "cover",
             backgroundPosition: "center",
             backgroundRepeat: "no-repeat",
-            backgroundColor: "rgba(5, 25, 55, .9)",
-            backgroundBlendMode: "hard-light",
+            backgroundColor: "background.paper",
+            backgroundBlendMode: "soft-light",
             backgroundAttachment: "fixed",
             animation: `${
               currentBgIdx === i ? fadeIn : fadeOut
-            } 1s ease-in-out forwards`,
+            } 5s linear forwards`,
           }}
         />
       ))}

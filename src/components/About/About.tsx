@@ -1,45 +1,35 @@
 import { FC } from "react";
 import Screen from "components/Screen";
-import { Grid, ImageList, ImageListItem, Typography } from "@mui/material";
+import { Grid, Typography } from "@mui/material";
 import { Box } from "@mui/system";
 import aboutImg from "assets/img/about1.jpg";
-import aboutImg2 from "assets/img/about2.jpg";
-import aboutImg3 from "assets/img/about3.jpg";
-import aboutImg4 from "assets/img/about4.jpg";
-import aboutImg5 from "assets/img/about5.jpg";
+import SectionTitle from "components/SectionTitle";
 
-const ABOUT_IMGS = [
-  { src: aboutImg4 },
-  { src: aboutImg, cols: 2 },
-  { src: aboutImg2 },
-  { src: aboutImg3, cols: 2 },
-  { src: aboutImg5, cols: 2 },
-];
 const About: FC = () => {
   return (
     <Screen>
-      <Grid container columnSpacing={10}>
-        <Grid item md={12}>
-          <Typography variant="h2" align="center" mt={3}>
-            About
-          </Typography>
-          <Box px={10} sx={{ display: "grid", placeItems: "center" }}>
-            <Typography variant="body2" align="center" mt={3}>
+      <SectionTitle title="about" bgImage={aboutImg} />
+      <Grid container columnSpacing={0} justifyContent="center">
+        <Grid item md={8}>
+          <Box px={5} sx={{ display: "grid", placeItems: "center" }}>
+            <Typography
+              variant="h1"
+              align="center"
+              sx={{
+                mt: 10,
+                fontSize: "1.8rem",
+                fontWeight: 200,
+                textAlign: "left",
+                lineHeight: "1.3em",
+              }}
+              data-aos="fade"
+            >
               The Bull Pub and Grill brings you an atmosphere like no other. We
               have delicious menu items, fantastic service, a great variety of
               cocktails and beers. Always showing all your favourite sports on
               multiple screens: NHL, NBA, MLB, Premier League and more!
             </Typography>
           </Box>
-        </Grid>
-        <Grid item md={12}>
-          <ImageList variant="quilted" cols={4} rowHeight={200}>
-            {ABOUT_IMGS.map(({ src, cols }, i) => (
-              <ImageListItem key={`aboutImg-${i}`} cols={cols || 1}>
-                <img src={src} alt={`about-${i}`} />
-              </ImageListItem>
-            ))}
-          </ImageList>
         </Grid>
       </Grid>
     </Screen>

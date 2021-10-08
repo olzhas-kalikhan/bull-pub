@@ -1,4 +1,4 @@
-import { AppBar, Tab, Tabs, Box, Button, Typography } from "@mui/material";
+import { AppBar, Tab, Tabs, Box, Typography, Container } from "@mui/material";
 import { FC, useState, useEffect } from "react";
 import { scroller } from "react-scroll";
 
@@ -33,18 +33,17 @@ const NavBar: FC = () => {
   }, [scrollPos, currentTab]);
   return (
     <AppBar
-      color={isHomeScreen ? "transparent" : "default"}
+      color={isHomeScreen ? "transparent" : "primary"}
       sx={{
         boxShadow: isHomeScreen ? "none" : "",
         transition: "background-color 0.3s",
+        backgroundImage: "none",
       }}
     >
-      <Box
+      <Container
         sx={{
-          height: "80%",
-          width: "100%",
           display: "flex",
-          justifyContent: "space-around",
+          justifyContent: "space-between",
         }}
       >
         <Box sx={{ textShadow: "0em 0.1em 0.5em #000" }}>
@@ -54,12 +53,17 @@ const NavBar: FC = () => {
           <Typography variant="h6">Pub & Grill </Typography>
         </Box>
 
-        <Box sx={{ width: "50%" }}>
+        <Box>
           <Tabs
             value={currentTab}
             onChange={handleTabChange}
             centered
             sx={{ height: "100%", alignItems: "center" }}
+            TabIndicatorProps={{
+              style: {
+                display: "none",
+              },
+            }}
           >
             {NAVS.map(({ label, containerId }, i) => (
               <Tab
@@ -71,22 +75,7 @@ const NavBar: FC = () => {
             ))}
           </Tabs>
         </Box>
-        <Box sx={{ my: "auto" }}>
-          <Button
-            color="primary"
-            variant="contained"
-            onClick={() => {
-              scroller.scrollTo("Screen-Contacts", {
-                duration: 700,
-                smooth: true,
-                offset: 1,
-              });
-            }}
-          >
-            Call Us Now
-          </Button>
-        </Box>
-      </Box>
+      </Container>
     </AppBar>
   );
 };

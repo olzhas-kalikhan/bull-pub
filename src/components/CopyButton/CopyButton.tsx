@@ -27,7 +27,7 @@ const CopyButton: FC<CopyButtonProps> = ({ copyContent }) => {
 
   return (
     <Box sx={{ display: "flex", alignItems: "center" }}>
-      <Typography variant="caption">{copyContent}</Typography>
+      <Typography variant="body1">{copyContent}</Typography>
       <IconButton onClick={handleClick}>
         {copyPressed ? (
           <Fade in={copyPressed}>

@@ -18,87 +18,25 @@ let theme = createTheme({
       main: "#FE2626",
     },
     background: {
-      paper: "#051937",
-      default: "#051937",
+      default: "#16161d",
+      paper: "#16161d",
     },
-    transparent: "rgba(5, 20, 38,0.85)",
-    divider: "rgba(255,255,255,0.30)",
   },
   typography: {
-    fontFamily: ["Maven Pro", "Martel Sans", "Roboto"].join(","),
+    fontFamily: ["Work Sans", "Passion One", "Open Sans"].join(","),
     fontWeightMedium: 600,
   },
 });
-
-theme.typography.h1 = {
-  fontFamily: "Maven Pro",
-  fontWeight: 900,
-  fontSize: "3.6rem",
-  [theme.breakpoints.up("md")]: {
-    fontSize: "4rem",
-  },
-};
 theme.typography.h2 = {
-  fontFamily: "Martel Sans",
-  fontSize: "2.2rem",
-  textShadow: "0em 0.1em 0.5em #000",
-  [theme.breakpoints.up("md")]: {
-    fontSize: "2.5rem",
-  },
+  ...theme.typography.h2,
+  fontSize: "3rem",
+  textTransform: "uppercase",
 };
-theme.typography.h3 = {
-  fontFamily: "Martel Sans",
-  fontWeight: 500,
-  fontSize: "2rem",
-
-  [theme.breakpoints.up("md")]: {
-    fontSize: "3rem",
-  },
-};
-theme.typography.h4 = {
-  fontFamily: "Martel Sans",
-  fontWeight: 500,
-  fontSize: "1.8rem",
-  [theme.breakpoints.up("md")]: {
-    fontSize: "2rem",
-  },
-};
-theme.typography.h5 = {
-  fontFamily: "Maven Pro",
-  fontWeight: 800,
-  fontSize: "1rem",
-  textAlign: "center",
-  [theme.breakpoints.up("md")]: {
-    fontSize: "1.4rem",
-  },
-};
-theme.typography.h6 = {
-  fontFamily: "Martel Sans",
-  fontWeight: 500,
-  fontSize: "0.8rem",
-  textAlign: "center",
-  [theme.breakpoints.up("md")]: {
-    fontSize: "1rem",
-  },
-};
-theme.typography.body2 = {
-  fontFamily: "Roboto",
-  fontSize: "1.5rem",
-};
-theme.typography.subtitle1 = {
-  fontSize: "1rem",
-  fontWeight: 500,
-  opacity: 0.9,
-  [theme.breakpoints.up("md")]: {
-    fontSize: "1.2rem",
-  },
-};
-theme.typography.caption = {
-  fontSize: "0.9rem",
-  fontWeight: 300,
-  [theme.breakpoints.up("md")]: {
-    fontSize: "1rem",
-  },
+theme.typography.subtitle2 = {
+  ...theme.typography.subtitle2,
+  fontSize: "1.2rem",
+  fontWeight: 400,
+  textTransform: "uppercase",
 };
 theme.breakpoints.values.xl = 9000;
 export { theme };
