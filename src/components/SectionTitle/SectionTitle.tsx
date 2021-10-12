@@ -9,7 +9,9 @@ const SectionTitle: FC<SectionTitleProps> = ({ bgImage, title }) => {
   return (
     <Box
       sx={{
-        p: "5rem 50%",
+        display: "grid",
+        placeItems: "center",
+        py: "5rem",
         m: "0 calc(-50vw + 50%)",
         mt: 8,
         backgroundImage: `url(${bgImage})`,

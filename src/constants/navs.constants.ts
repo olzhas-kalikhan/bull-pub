@@ -1,7 +1,7 @@
 import About from "components/About";
 import Drinks from "components/Drinks";
 import Landing from "components/Landing";
-import Locations from "components/Locations";
+import Locations from "components/Contacts";
 import Menu from "components/Menu";
 
 const NAVS = [

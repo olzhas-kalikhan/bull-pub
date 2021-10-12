@@ -3,14 +3,14 @@ export type Schedule = {
   open: number;
   close: number;
 };
-type Location = {
+export type LocationDetails = {
   city: string;
   coords: Point;
   address: string;
   phone: string;
   schedule: string;
 };
-export const LOCATIONS: Location[] = [
+export const LOCATIONS: LocationDetails[] = [
   {
     city: "Mississauga",
     coords: [43.6624908, -79.5929195],
@@ -23,6 +23,7 @@ export const LOCATIONS: Location[] = [
     coords: [43.6452552, -79.5202029],
     address: "3313 Bloor St W, Etobicoke, ON M8X 1E7",
     phone: "+14162399484",
-    schedule: "Sunday - Wednesday: 11am - 12am, Thursday - Saturday: 11am - 2am",
+    schedule:
+      "Sunday - Wednesday: 11am - 12am, Thursday - Saturday: 11am - 2am",
   },
 ];
