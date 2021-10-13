@@ -1,3 +1,4 @@
+import { FC } from "react";
 import {
   List,
   ListItem,
@@ -8,9 +9,12 @@ import {
 import Responsive from "components/Responsive";
 import MenuItem from "components/MenuItem";
 import { useState } from "react";
-import { MENU_CATEGORIES } from "constants/menu.constants";
 
-const MobileMenu = () => {
+import { Category } from "types/menu";
+type Props = {
+  categories: Category[];
+};
+const Mobile: FC<Props> = ({ categories }) => {
   const [categoryIdx, setCategoryIdx] = useState<number>(0);
   const handleSelectChange = (event: SelectChangeEvent<string>) => {
     setCategoryIdx(parseInt(event.target.value));
@@ -19,20 +23,20 @@ const MobileMenu = () => {
     <Responsive min="xs" max="md">
       <Select
         variant="standard"
-        label={MENU_CATEGORIES[categoryIdx].id}
+        label={categories[categoryIdx].id}
         value={`${categoryIdx}`}
         onChange={handleSelectChange}
       >
-        {MENU_CATEGORIES.map((category, i) => (
+        {categories.map((category, i) => (
           <Item key={`Category-${category.id}`} value={i}>
             {category.id}
           </Item>
         ))}
       </Select>
       <List>
-        {MENU_CATEGORIES[categoryIdx].items?.map((item) => (
+        {categories[categoryIdx].items?.map((item) => (
           <ListItem
-            key={`${MENU_CATEGORIES[categoryIdx].id}-${item.title}`}
+            key={`${categories[categoryIdx].id}-${item.title}`}
             sx={{
               display: "flex",
               flexDirection: "column",
@@ -46,4 +50,4 @@ const MobileMenu = () => {
     </Responsive>
   );
 };
-export default MobileMenu;
+export default Mobile;

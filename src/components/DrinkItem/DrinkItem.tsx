@@ -1,9 +1,9 @@
 import { FC } from "react";
 import { Box, Divider, Typography } from "@mui/material";
-import { DrinkMenuItem } from "constants/drinks.constants";
+import { MenuItem } from "types/menu";
 
 type DrinkItemProps = {
-  item: DrinkMenuItem;
+  item: MenuItem;
 };
 const DrinkItem: FC<DrinkItemProps> = ({ item }) => {
   const { title, description, options, logo } = item;

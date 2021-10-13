@@ -1,6 +1,6 @@
 import { Box, Grid } from "@mui/material";
 import { FC } from "react";
-import { Category } from "constants/menu.constants";
+import { Category } from "types/menu";
 import MenuItem from "components/MenuItem";
 import DrinkItem from "components/DrinkItem/DrinkItem";
 type CategoryPanelProps = {

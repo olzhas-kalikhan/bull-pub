@@ -1,12 +1,12 @@
 import { FC } from "react";
 import { Box, Divider, Typography } from "@mui/material";
-import { FoodItem } from "constants/menu.constants";
+import { MenuItem as MenuItemType } from "types/menu";
 
 type MenuItemProps = {
-  item: FoodItem;
+  item: MenuItemType;
 };
 const MenuItem: FC<MenuItemProps> = ({ item }) => {
-  const { title, description, price } = item;
+  const { title, description, options } = item;
   return (
     <Box sx={{ mt: 1, mb: 1 }} width="100%">
       <Box
@@ -16,9 +16,9 @@ const MenuItem: FC<MenuItemProps> = ({ item }) => {
         }}
       >
         <Typography variant="subtitle2">{title}</Typography>
-        {price && (
+        {options?.map(({ price, description }) => (
           <Typography variant="subtitle2">${price.toFixed(2)}</Typography>
-        )}
+        ))}
       </Box>
       {description && (
         <Typography variant="body2" color={"text.secondary"}>

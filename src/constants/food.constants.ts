@@ -1,5 +1,5 @@
 import { Category } from "types/menu.d";
-export const MENU_CATEGORIES: Category[] = [
+export const FOOD_CATEGORIES: Category[] = [
   {
     id: "Appertizers",
     items: [

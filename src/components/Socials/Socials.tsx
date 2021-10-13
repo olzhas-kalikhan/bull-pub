@@ -27,7 +27,7 @@ const Socials = () => {
         <Link key={link} href={link} target="_blank" sx={{ mx: 2 }}>
           <IconButton
             sx={{
-              fontSize: "3rem",
+              fontSize: "2.5rem",
               color: "background.default",
               backgroundColor: "primary.main",
               ":hover": {

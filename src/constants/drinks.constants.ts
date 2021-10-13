@@ -1,19 +1,6 @@
 // import HeinekenLogo from "assets/img/logos/heineken.jpg";
-export type DrinkCategory = {
-  id: string;
-  items?: DrinkMenuItem[];
-};
-export type DrinkMenuItem = {
-  title: string;
-  options?: DrinkOption[];
-  description?: string;
-  logo?: string;
-};
-export type DrinkOption = {
-  size: string;
-  price: number;
-};
-export const DRINK_CATEGORIES: DrinkCategory[] = [
+import { Category } from "types/menu.d";
+export const DRINK_CATEGORIES: Category[] = [
   {
     id: "DRAUGHT BEER",
     items: [
@@ -23,11 +10,11 @@ export const DRINK_CATEGORIES: DrinkCategory[] = [
           "A refreshing lager beer with a distinct and balanced taste. The shade of fruitiness nicely blends with the bitterness of the hops",
         options: [
           {
-            size: "20oz",
+            description: "20oz",
             price: 6.5,
           },
           {
-            size: "bottle",
+            description: "bottle",
             price: 8.9,
           },
         ],
@@ -37,7 +24,7 @@ export const DRINK_CATEGORIES: DrinkCategory[] = [
         title: "Molson Canadian",
         options: [
           {
-            size: "20oz",
+            description: "20oz",
             price: 6.5,
           },
         ],
@@ -46,7 +33,7 @@ export const DRINK_CATEGORIES: DrinkCategory[] = [
         title: "Coors Original",
         options: [
           {
-            size: "20oz",
+            description: "20oz",
             price: 7.25,
           },
         ],
@@ -55,7 +42,7 @@ export const DRINK_CATEGORIES: DrinkCategory[] = [
         title: "Rickard's Red",
         options: [
           {
-            size: "20oz",
+            description: "20oz",
             price: 7.25,
           },
         ],
@@ -64,7 +51,7 @@ export const DRINK_CATEGORIES: DrinkCategory[] = [
         title: "Budweiser",
         options: [
           {
-            size: "20oz",
+            description: "20oz",
             price: 6.5,
           },
         ],
@@ -73,7 +60,7 @@ export const DRINK_CATEGORIES: DrinkCategory[] = [
         title: "Bud Light",
         options: [
           {
-            size: "20oz",
+            description: "20oz",
             price: 6.5,
           },
         ],
@@ -82,7 +69,7 @@ export const DRINK_CATEGORIES: DrinkCategory[] = [
         title: "Moosehead Lager",
         options: [
           {
-            size: "20oz",
+            description: "20oz",
             price: 7.25,
           },
         ],
@@ -91,7 +78,7 @@ export const DRINK_CATEGORIES: DrinkCategory[] = [
         title: "Alexander Keith's Ipa",
         options: [
           {
-            size: "20oz",
+            description: "20oz",
             price: 7.25,
           },
         ],
@@ -100,7 +87,7 @@ export const DRINK_CATEGORIES: DrinkCategory[] = [
         title: "Shocktop Belgian White",
         options: [
           {
-            size: "20oz",
+            description: "20oz",
             price: 7.25,
           },
         ],
@@ -109,7 +96,7 @@ export const DRINK_CATEGORIES: DrinkCategory[] = [
         title: "Newcastle Brown Ale",
         options: [
           {
-            size: "20oz",
+            description: "20oz",
             price: 8.9,
           },
         ],
@@ -118,7 +105,7 @@ export const DRINK_CATEGORIES: DrinkCategory[] = [
         title: "Goose Island Ipa",
         options: [
           {
-            size: "20oz",
+            description: "20oz",
             price: 8.5,
           },
         ],
@@ -127,7 +114,7 @@ export const DRINK_CATEGORIES: DrinkCategory[] = [
         title: "Krombacher Pilsner",
         options: [
           {
-            size: "20oz",
+            description: "20oz",
             price: 8.5,
           },
         ],
@@ -136,7 +123,7 @@ export const DRINK_CATEGORIES: DrinkCategory[] = [
         title: "Guinness Stout",
         options: [
           {
-            size: "20oz",
+            description: "20oz",
             price: 8.5,
           },
         ],
@@ -145,7 +132,7 @@ export const DRINK_CATEGORIES: DrinkCategory[] = [
         title: "Stella Artois Lager",
         options: [
           {
-            size: "20oz",
+            description: "20oz",
             price: 8.5,
           },
         ],
@@ -161,7 +148,7 @@ export const DRINK_CATEGORIES: DrinkCategory[] = [
           "Fruity and refreshing cider. The ultimate thirst- quencher and number 1 cider in the world",
         options: [
           {
-            size: "20oz",
+            description: "20oz",
             price: 8.9,
           },
         ],
@@ -170,7 +157,7 @@ export const DRINK_CATEGORIES: DrinkCategory[] = [
         title: "Somersby Apple Cider",
         options: [
           {
-            size: "Tall Can",
+            description: "Tall Can",
             price: 9,
           },
         ],
@@ -184,7 +171,7 @@ export const DRINK_CATEGORIES: DrinkCategory[] = [
         title: "Duggan's #9 Ipa",
         options: [
           {
-            size: "20oz",
+            description: "20oz",
             price: 7.25,
           },
         ],
@@ -193,7 +180,7 @@ export const DRINK_CATEGORIES: DrinkCategory[] = [
         title: "HOP CITY - 8TH SIN BLACK LAGER",
         options: [
           {
-            size: "20oz",
+            description: "20oz",
             price: 7.25,
           },
         ],
@@ -202,7 +189,7 @@ export const DRINK_CATEGORIES: DrinkCategory[] = [
         title: "HOP CITY - BARKING SQUIRREL LAGER",
         options: [
           {
-            size: "20oz",
+            description: "20oz",
             price: 7.25,
           },
         ],
@@ -211,7 +198,7 @@ export const DRINK_CATEGORIES: DrinkCategory[] = [
         title: "HOP CITY - POLLY PILSNER",
         options: [
           {
-            size: "20oz",
+            description: "20oz",
             price: 7.25,
           },
         ],
@@ -220,7 +207,7 @@ export const DRINK_CATEGORIES: DrinkCategory[] = [
         title: "HOP CITY - HOP BOT IPA",
         options: [
           {
-            size: "20oz",
+            description: "20oz",
             price: 7.25,
           },
         ],
@@ -229,7 +216,7 @@ export const DRINK_CATEGORIES: DrinkCategory[] = [
         title: "STEAMWHISTLE PILSNER",
         options: [
           {
-            size: "20oz",
+            description: "20oz",
             price: 7.25,
           },
         ],
@@ -243,7 +230,7 @@ export const DRINK_CATEGORIES: DrinkCategory[] = [
         title: "MOLSON CANADIAN",
         options: [
           {
-            size: "Bottle",
+            description: "Bottle",
             price: 5.25,
           },
         ],
@@ -252,7 +239,7 @@ export const DRINK_CATEGORIES: DrinkCategory[] = [
         title: "COORS LIGHT",
         options: [
           {
-            size: "Bottle",
+            description: "Bottle",
             price: 5.25,
           },
         ],
@@ -261,7 +248,7 @@ export const DRINK_CATEGORIES: DrinkCategory[] = [
         title: "MILLER LITE",
         options: [
           {
-            size: "Bottle",
+            description: "Bottle",
             price: 5.25,
           },
         ],
@@ -270,7 +257,7 @@ export const DRINK_CATEGORIES: DrinkCategory[] = [
         title: "MOLSON ULTRA",
         options: [
           {
-            size: "Bottle",
+            description: "Bottle",
             price: 5.25,
           },
         ],
@@ -279,7 +266,7 @@ export const DRINK_CATEGORIES: DrinkCategory[] = [
         title: "MOLSON EXPORT",
         options: [
           {
-            size: "Bottle",
+            description: "Bottle",
             price: 5.25,
           },
         ],
@@ -288,7 +275,7 @@ export const DRINK_CATEGORIES: DrinkCategory[] = [
         title: "BUDWEISER",
         options: [
           {
-            size: "Bottle",
+            description: "Bottle",
             price: 5.25,
           },
         ],
@@ -297,7 +284,7 @@ export const DRINK_CATEGORIES: DrinkCategory[] = [
         title: "BUD LIGHT",
         options: [
           {
-            size: "Bottle",
+            description: "Bottle",
             price: 5.25,
           },
         ],
@@ -306,7 +293,7 @@ export const DRINK_CATEGORIES: DrinkCategory[] = [
         title: "LABATT BLUE",
         options: [
           {
-            size: "Bottle",
+            description: "Bottle",
             price: 5.25,
           },
         ],
@@ -315,7 +302,7 @@ export const DRINK_CATEGORIES: DrinkCategory[] = [
         title: "BLUE LIGHT",
         options: [
           {
-            size: "Bottle",
+            description: "Bottle",
             price: 5.25,
           },
         ],
@@ -324,7 +311,7 @@ export const DRINK_CATEGORIES: DrinkCategory[] = [
         title: "LABATT 50",
         options: [
           {
-            size: "Bottle",
+            description: "Bottle",
             price: 5.25,
           },
         ],
@@ -333,7 +320,7 @@ export const DRINK_CATEGORIES: DrinkCategory[] = [
         title: "MOOSEHEAD LAGER",
         options: [
           {
-            size: "Bottle",
+            description: "Bottle",
             price: 5.5,
           },
         ],
@@ -342,7 +329,7 @@ export const DRINK_CATEGORIES: DrinkCategory[] = [
         title: "KRONENBOURG BLANC",
         options: [
           {
-            size: "Bottle",
+            description: "Bottle",
             price: 6,
           },
         ],
@@ -351,7 +338,7 @@ export const DRINK_CATEGORIES: DrinkCategory[] = [
         title: "MICHELOB ULTRA",
         options: [
           {
-            size: "Bottle",
+            description: "Bottle",
             price: 6,
           },
         ],
@@ -360,7 +347,7 @@ export const DRINK_CATEGORIES: DrinkCategory[] = [
         title: "CORONA",
         options: [
           {
-            size: "Bottle",
+            description: "Bottle",
             price: 6,
           },
         ],
@@ -369,7 +356,7 @@ export const DRINK_CATEGORIES: DrinkCategory[] = [
         title: "STELLA ARTOIS",
         options: [
           {
-            size: "Bottle",
+            description: "Bottle",
             price: 6,
           },
         ],
@@ -378,7 +365,7 @@ export const DRINK_CATEGORIES: DrinkCategory[] = [
         title: "HEINEKEN 0.0",
         options: [
           {
-            size: "Bottle",
+            description: "Bottle",
             price: 5.25,
           },
         ],
@@ -392,7 +379,7 @@ export const DRINK_CATEGORIES: DrinkCategory[] = [
         title: "KILKENNY",
         options: [
           {
-            size: "Tall Can",
+            description: "Tall Can",
             price: 8,
           },
         ],
@@ -401,7 +388,7 @@ export const DRINK_CATEGORIES: DrinkCategory[] = [
         title: "HARP LAGER",
         options: [
           {
-            size: "Tall Can",
+            description: "Tall Can",
             price: 8,
           },
         ],
@@ -416,7 +403,7 @@ export const DRINK_CATEGORIES: DrinkCategory[] = [
         description: "Stolichnaya Vodka, Lime and Ginger Beer",
         options: [
           {
-            size: "2oz",
+            description: "2oz",
             price: 12,
           },
         ],
@@ -426,7 +413,7 @@ export const DRINK_CATEGORIES: DrinkCategory[] = [
         description: "Gin, Campari and Sweet Vermouth",
         options: [
           {
-            size: "2oz",
+            description: "2oz",
             price: 11,
           },
         ],
@@ -436,7 +423,7 @@ export const DRINK_CATEGORIES: DrinkCategory[] = [
         description: "Tequila, Lime Juice and Cointreau",
         options: [
           {
-            size: "2oz",
+            description: "2oz",
             price: 11,
           },
         ],
@@ -447,7 +434,7 @@ export const DRINK_CATEGORIES: DrinkCategory[] = [
           "Whyte & Mackay Whiskey, Agave, and Bitters, served with an orange twist",
         options: [
           {
-            size: "2oz",
+            description: "2oz",
             price: 11,
           },
         ],
@@ -457,7 +444,7 @@ export const DRINK_CATEGORIES: DrinkCategory[] = [
         description: "Lamb's White Rum, Blue Curacao, with pineapple juice",
         options: [
           {
-            size: "2oz",
+            description: "2oz",
             price: 11,
           },
         ],
@@ -468,7 +455,7 @@ export const DRINK_CATEGORIES: DrinkCategory[] = [
           "Whyte & Mackay Whiskey, Kahlua, over ice with milk and a splash of Pepsi",
         options: [
           {
-            size: "2oz",
+            description: "2oz",
             price: 11,
           },
         ],
@@ -479,7 +466,7 @@ export const DRINK_CATEGORIES: DrinkCategory[] = [
           "Blueberry Vodka, Malibu Rum, pineapple juice and grenadine",
         options: [
           {
-            size: "2oz",
+            description: "2oz",
             price: 11,
           },
         ],
@@ -489,7 +476,7 @@ export const DRINK_CATEGORIES: DrinkCategory[] = [
         description: "Malibu Rum, Melon Liquor, orange and pineapple juice",
         options: [
           {
-            size: "2oz",
+            description: "2oz",
             price: 11,
           },
         ],
@@ -500,7 +487,7 @@ export const DRINK_CATEGORIES: DrinkCategory[] = [
           "Gin, Lemon, Agave and Club Soda served with a lemon wedge",
         options: [
           {
-            size: "2oz",
+            description: "2oz",
             price: 11,
           },
         ],
@@ -511,7 +498,7 @@ export const DRINK_CATEGORIES: DrinkCategory[] = [
           "Stolichnaya Vodka, Creme de Cacao, shaken with ice, served with a cherry",
         options: [
           {
-            size: "2oz",
+            description: "2oz",
             price: 11,
           },
         ],
@@ -522,7 +509,7 @@ export const DRINK_CATEGORIES: DrinkCategory[] = [
           "Stolichnaya Vodka, Peach Schnapps shaken with cranberry juice",
         options: [
           {
-            size: "2oz",
+            description: "2oz",
             price: 11,
           },
         ],
@@ -533,7 +520,7 @@ export const DRINK_CATEGORIES: DrinkCategory[] = [
           "Stolichnaya Vodka, Malibu Rum, pineapple juice and grenadine",
         options: [
           {
-            size: "2oz",
+            description: "2oz",
             price: 11,
           },
         ],
@@ -547,7 +534,7 @@ export const DRINK_CATEGORIES: DrinkCategory[] = [
         title: "TWISTED TEA",
         options: [
           {
-            size: "Can",
+            description: "Can",
             price: 6,
           },
         ],
@@ -556,7 +543,7 @@ export const DRINK_CATEGORIES: DrinkCategory[] = [
         title: "SOCIAL LITE - TRIPLE BERRY/LIME GINGER",
         options: [
           {
-            size: "Can",
+            description: "Can",
             price: 7.5,
           },
         ],
@@ -565,7 +552,7 @@ export const DRINK_CATEGORIES: DrinkCategory[] = [
         title: "SOCIAL LITE - LEMON CUCUMBER MINT",
         options: [
           {
-            size: "Can",
+            description: "Can",
             price: 7.5,
           },
         ],
@@ -574,7 +561,7 @@ export const DRINK_CATEGORIES: DrinkCategory[] = [
         title: "SOCIAL LITE - PINEAPPLE MANGO",
         options: [
           {
-            size: "Can",
+            description: "Can",
             price: 7.5,
           },
         ],
@@ -583,7 +570,7 @@ export const DRINK_CATEGORIES: DrinkCategory[] = [
         title: "SOCIAL LITE - GRAPEFRUIT POMELO",
         options: [
           {
-            size: "Can",
+            description: "Can",
             price: 7.5,
           },
         ],
@@ -592,7 +579,7 @@ export const DRINK_CATEGORIES: DrinkCategory[] = [
         title: "SMIRNOFF ICE",
         options: [
           {
-            size: "Bottle",
+            description: "Bottle",
             price: 7.5,
           },
         ],
@@ -606,15 +593,15 @@ export const DRINK_CATEGORIES: DrinkCategory[] = [
         title: "WOLF BLASS - YELLOW LABEL CHARDONNAY",
         options: [
           {
-            size: "5oz",
+            description: "5oz",
             price: 9,
           },
           {
-            size: "8oz",
+            description: "8oz",
             price: 14,
           },
           {
-            size: "Bottle",
+            description: "Bottle",
             price: 42,
           },
         ],
@@ -623,15 +610,15 @@ export const DRINK_CATEGORIES: DrinkCategory[] = [
         title: "GABBIANO - PINOT GRIGIO",
         options: [
           {
-            size: "5oz",
+            description: "5oz",
             price: 9,
           },
           {
-            size: "8oz",
+            description: "8oz",
             price: 14,
           },
           {
-            size: "Bottle",
+            description: "Bottle",
             price: 42,
           },
         ],
@@ -640,15 +627,15 @@ export const DRINK_CATEGORIES: DrinkCategory[] = [
         title: "DEINHARD GREEN LABEL - RIESLING",
         options: [
           {
-            size: "5oz",
+            description: "5oz",
             price: 8,
           },
           {
-            size: "8oz",
+            description: "8oz",
             price: 13,
           },
           {
-            size: "Bottle",
+            description: "Bottle",
             price: 39,
           },
         ],
@@ -657,15 +644,15 @@ export const DRINK_CATEGORIES: DrinkCategory[] = [
         title: "PARLEZ VOUS - SAUVIGNON BLANC",
         options: [
           {
-            size: "5oz",
+            description: "5oz",
             price: 8,
           },
           {
-            size: "8oz",
+            description: "8oz",
             price: 12,
           },
           {
-            size: "Bottle",
+            description: "Bottle",
             price: 36,
           },
         ],
@@ -679,15 +666,15 @@ export const DRINK_CATEGORIES: DrinkCategory[] = [
         title: "ROSEMOUNT - DIAMOND SHIRAZ",
         options: [
           {
-            size: "5oz",
+            description: "5oz",
             price: 9,
           },
           {
-            size: "8oz",
+            description: "8oz",
             price: 14,
           },
           {
-            size: "Bottle",
+            description: "Bottle",
             price: 42,
           },
         ],
@@ -696,15 +683,15 @@ export const DRINK_CATEGORIES: DrinkCategory[] = [
         title: "BV COASTAL - CABERNET SAUVIGNON",
         options: [
           {
-            size: "5oz",
+            description: "5oz",
             price: 8,
           },
           {
-            size: "8oz",
+            description: "8oz",
             price: 13,
           },
           {
-            size: "Bottle",
+            description: "Bottle",
             price: 39,
           },
         ],
@@ -713,15 +700,15 @@ export const DRINK_CATEGORIES: DrinkCategory[] = [
         title: "GRAFFIGNA - MALBEC",
         options: [
           {
-            size: "5oz",
+            description: "5oz",
             price: 9,
           },
           {
-            size: "8oz",
+            description: "8oz",
             price: 14,
           },
           {
-            size: "Bottle",
+            description: "Bottle",
             price: 42,
           },
         ],
@@ -730,15 +717,15 @@ export const DRINK_CATEGORIES: DrinkCategory[] = [
         title: "GABBIANO - CHIANTI",
         options: [
           {
-            size: "5oz",
+            description: "5oz",
             price: 9,
           },
           {
-            size: "8oz",
+            description: "8oz",
             price: 15,
           },
           {
-            size: "Bottle",
+            description: "Bottle",
             price: 45,
           },
         ],
@@ -747,7 +734,7 @@ export const DRINK_CATEGORIES: DrinkCategory[] = [
         title: "LIBERTY SCHOOL - CABERNET SAUVIGNON",
         options: [
           {
-            size: "Bottle",
+            description: "Bottle",
             price: 65,
           },
         ],
@@ -761,15 +748,15 @@ export const DRINK_CATEGORIES: DrinkCategory[] = [
         title: "BERINGER MAIN & WINE - WHITE ZINFANDEL",
         options: [
           {
-            size: "5oz",
+            description: "5oz",
             price: 7,
           },
           {
-            size: "8oz",
+            description: "8oz",
             price: 11,
           },
           {
-            size: "Bottle",
+            description: "Bottle",
             price: 33,
           },
         ],
@@ -778,7 +765,7 @@ export const DRINK_CATEGORIES: DrinkCategory[] = [
         title: "HENKELL - TROCKEN PICCOLO (200ML)",
         options: [
           {
-            size: "Bottle",
+            description: "Bottle",
             price: 12,
           },
         ],
@@ -787,11 +774,11 @@ export const DRINK_CATEGORIES: DrinkCategory[] = [
         title: "RED OR WHITE SANGRIA",
         options: [
           {
-            size: "Glass",
+            description: "Glass",
             price: 12,
           },
           {
-            size: "Pitcher",
+            description: "Pitcher",
             price: 34,
           },
         ],
@@ -802,7 +789,7 @@ export const DRINK_CATEGORIES: DrinkCategory[] = [
 // {
 //   title: "",
 //   options:[{
-//     size:'',
+//     description:'',
 //     price:
 //   }]
 // },

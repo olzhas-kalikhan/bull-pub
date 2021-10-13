@@ -23,6 +23,7 @@ let theme = createTheme({
     },
   },
   typography: {
+    fontSize: 16,
     fontFamily: ["Work Sans", "Passion One", "Open Sans"].join(","),
     fontWeightMedium: 600,
   },
@@ -31,6 +32,11 @@ theme.typography.h2 = {
   ...theme.typography.h2,
   fontSize: "3rem",
   textTransform: "uppercase",
+};
+theme.typography.body2 = {
+  ...theme.typography.body2,
+  fontWeight: 200,
+  letterSpacing: 1.5,
 };
 theme.typography.subtitle2 = {
   ...theme.typography.subtitle2,
